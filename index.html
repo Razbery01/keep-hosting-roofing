@@ -108,11 +108,8 @@ ul{list-style:none;}
 }
 .nav.scrolled{box-shadow:0 6px 26px -14px rgba(46,35,20,.4);}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:74px;}
-.logo{display:flex;align-items:center;gap:.7rem;}
-.logo-mark{width:46px;height:46px;flex-shrink:0;}
-.logo-text{display:flex;flex-direction:column;line-height:1;}
-.logo-text .lt-main{font-family:'Playfair Display',serif;font-weight:700;font-size:1.32rem;color:var(--ink);}
-.logo-text .lt-sub{font-family:'Outfit',sans-serif;font-weight:700;font-size:.6rem;letter-spacing:.34em;color:var(--gold-deep);margin-top:3px;}
+.logo{display:flex;align-items:center;}
+.logo img{height:58px;width:auto;display:block;}
 .nav-links{display:flex;align-items:center;gap:.35rem;}
 .nav-links a{
   font-family:'Outfit',sans-serif;font-weight:600;font-size:.84rem;letter-spacing:.05em;
@@ -484,7 +481,8 @@ ul{list-style:none;}
 /* ════════════ FOOTER ════════════ */
 .footer{background:var(--brown-deep);color:#b6aa92;padding:4.5rem 0 0;}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:2.5rem;padding-bottom:3rem;}
-.footer .logo-text .lt-main{color:#fff;}
+.footer-logo{display:inline-block;background:#fff;padding:.7rem 1rem;border-radius:14px;box-shadow:0 8px 22px -10px rgba(0,0,0,.5);}
+.footer-logo img{height:54px;width:auto;display:block;}
 .footer-about p{font-size:.9rem;margin:1.2rem 0;}
 .footer-soc{display:flex;gap:.6rem;}
 .footer-soc a{
@@ -597,6 +595,7 @@ ul{list-style:none;}
 }
 @media(max-width:560px){
   .hero h1{font-size:2.4rem;}
+  .logo img{height:46px;}
   .hero-pills{grid-template-columns:1fr;}
   .svc-grid,.why-grid,.proj-grid,.rev-grid,.proc-grid{grid-template-columns:1fr;}
   .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:150px;}
@@ -634,19 +633,7 @@ ul{list-style:none;}
 <nav class="nav" id="nav">
   <div class="wrap">
     <a href="#home" class="logo" aria-label="Keep Hosting Roofing home">
-      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
-        <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#e3c87e"/><stop offset="0.55" stop-color="#c8a24c"/><stop offset="1" stop-color="#9c7a2e"/>
-        </linearGradient></defs>
-        <path d="M40 22 L52 33" fill="none" stroke="url(#lg)" stroke-width="5.5" stroke-linecap="round"/>
-        <path d="M6 41 L32 17 L58 41" fill="none" stroke="url(#lg)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <rect x="27" y="30" width="11" height="11" rx="1.5" fill="url(#lg)"/>
-        <path d="M9 47 Q32 39 55 47" fill="none" stroke="url(#lg)" stroke-width="3.4" stroke-linecap="round"/>
-      </svg>
-      <span class="logo-text">
-        <span class="lt-main">Keep Hosting</span>
-        <span class="lt-sub">R O O F I N G</span>
-      </span>
+      <img src="images/logo.png" alt="Keep Hosting Roofing">
     </a>
     <div class="nav-links" id="navLinks">
       <a href="#home">Home</a>
@@ -1183,17 +1170,8 @@ ul{list-style:none;}
 <footer class="footer">
   <div class="wrap footer-grid">
     <div class="footer-about">
-      <a href="#home" class="logo">
-        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
-          <path d="M40 22 L52 33" fill="none" stroke="url(#lg)" stroke-width="5.5" stroke-linecap="round"/>
-          <path d="M6 41 L32 17 L58 41" fill="none" stroke="url(#lg)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <rect x="27" y="30" width="11" height="11" rx="1.5" fill="url(#lg)"/>
-          <path d="M9 47 Q32 39 55 47" fill="none" stroke="url(#lg)" stroke-width="3.4" stroke-linecap="round"/>
-        </svg>
-        <span class="logo-text">
-          <span class="lt-main">Keep Hosting</span>
-          <span class="lt-sub">R O O F I N G</span>
-        </span>
+      <a href="#home" class="footer-logo" aria-label="Keep Hosting Roofing home">
+        <img src="images/logo.png" alt="Keep Hosting Roofing">
       </a>
       <p>Trusted roofing contractors protecting homes and businesses across KwaZulu-Natal with quality workmanship and honest service since 2013.</p>
       <div class="footer-soc">
